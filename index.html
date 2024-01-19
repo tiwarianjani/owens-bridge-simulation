@@ -562,18 +562,18 @@ function touchHandler(event) {
       console.log(data_r2);
 
       if (data6 == "" || data5 == "") {
-        alert("Fill empty values");// to show the pop up because it is required
+        swal("Fill empty values");// to show the pop up because it is required
 
         return;
       }
       if (data_c2 == "") {
-        alert("Select some the capacirence");
+        swal("Select some the capacirence");
         return;
       }
       data_c2 = parseFloat(data_c2);// used for converting int to flaot
       data_r2 = parseFloat(data_r2);
       if (data6 <= 0 || data5 <= 0) {
-        alert("Invalid Values");
+        swal("Invalid Values");
 
         return;
       }
@@ -601,7 +601,7 @@ function touchHandler(event) {
       const arr = [R1,L1,C2,R2,data5,data6];
       console.log(val_l, l_min, l_max);
       if (val_l>l_min && val_l<l_max) {
-        alert("Bridge is Balanced");
+        swal("Bridge is Balanced");
         for (var i = 1; i <= 6; i++) {
           if(i==2||i==3)
           {
@@ -649,7 +649,7 @@ function touchHandler(event) {
       else {
         var audio = new Audio("Timer.mp3");
         audio.play();
-        alert("Unbalanced Bridge");
+        swal("Unbalanced Bridge");
         if (val_l < (2 * data_L) && val_l > (1 / 2) * data_L)
           audio.volume = 0.1;
         else if (val_l < (5 * data_L) && val_l > (1 / 5) * data_L)
@@ -811,7 +811,7 @@ function touchHandler(event) {
         //scope: "someScope"
       });
       const Tid = []; const Sid = [];
-      //alert(allConnections.length);
+      //swal(allConnections.length);
       for (var i = 0; i < allConnections.length; i++) {
         var target = allConnections[i].targetId;
         var source = allConnections[i].sourceId;
@@ -841,7 +841,7 @@ function touchHandler(event) {
       const set_2 = new Set(arr1);
       console.log(arr_r, arr_c);
       if (Tid.length != 10 || Sid.length != 10 || !setsAreEqual(set_1, set_2) || c_r != 3 || c_v != 1 || c_t != 1 || c_L != 1 || c_c != 2) {
-        alert("Wrong Connection");
+        swal("Wrong Connection");
       }
       else {
         var amp = {};// this is map to store element connected with this element as source and then destination
@@ -886,7 +886,7 @@ function touchHandler(event) {
               b.removeAttribute('disabled');
               // or button.disabled = false;
          
-              alert("Right connection go....ahead");
+              swal("Right connection go....ahead");
               
               var v_top = document.querySelector('#' + s_v + '').getBoundingClientRect().top + 30;
               var v_left = document.querySelector('#' + s_v + '').getBoundingClientRect().left-270;
@@ -919,7 +919,7 @@ function touchHandler(event) {
             }
 
             else
-              alert("Wrong connection");
+              swal("Wrong connection");
           }
 
           else if (s[0] == 'c' && amp[s].length == 3 && amp[s][0] == arr[7])// galvanometer is conneccted to c4
@@ -944,7 +944,7 @@ function touchHandler(event) {
                 b.removeAttribute('disabled');
                 // or button.disabled = false;
            
-              alert("Right connection go....ahead");
+              swal("Right connection go....ahead");
               var v_top = document.querySelector('#' + s_v + '').getBoundingClientRect().top + 30;
               var v_left = document.querySelector('#' + s_v + '').getBoundingClientRect().left-270;
 
@@ -973,10 +973,10 @@ function touchHandler(event) {
             }
 
             else
-              alert(" Wrong connection");
+              swal(" Wrong connection");
           }
           else {
-            alert("Wrong Connection");
+            swal("Wrong Connection");
           }
 
 
