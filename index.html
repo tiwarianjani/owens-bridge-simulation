@@ -562,18 +562,18 @@ function touchHandler(event) {
       console.log(data_r2);
 
       if (data6 == "" || data5 == "") {
-        swal("Fill empty values");// to show the pop up because it is required
+        alert("Fill empty values");// to show the pop up because it is required
 
         return;
       }
       if (data_c2 == "") {
-        swal("Select some the capacirence");
+        alert("Select some the capacirence");
         return;
       }
       data_c2 = parseFloat(data_c2);// used for converting int to flaot
       data_r2 = parseFloat(data_r2);
       if (data6 <= 0 || data5 <= 0) {
-        swal("Invalid Values");
+        alert("Invalid Values");
 
         return;
       }
@@ -601,7 +601,7 @@ function touchHandler(event) {
       const arr = [R1,L1,C2,R2,data5,data6];
       console.log(val_l, l_min, l_max);
       if (val_l>l_min && val_l<l_max) {
-        swal("Bridge is Balanced");
+        alert("Bridge is Balanced");
         for (var i = 1; i <= 6; i++) {
           if(i==2||i==3)
           {
@@ -649,7 +649,7 @@ function touchHandler(event) {
       else {
         var audio = new Audio("Timer.mp3");
         audio.play();
-        swal("Unbalanced Bridge");
+        alert("Unbalanced Bridge");
         if (val_l < (2 * data_L) && val_l > (1 / 2) * data_L)
           audio.volume = 0.1;
         else if (val_l < (5 * data_L) && val_l > (1 / 5) * data_L)
