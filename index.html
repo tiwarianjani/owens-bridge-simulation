@@ -417,6 +417,10 @@
 
             <div id="mydiv" style="display:block;border: 2px solid black; padding: 20px;width: 90%;   position: absolute;
 top: 40px;right: 63px;">
+<div>
+  <h6>Voltage across detector:</h6>
+<p id="digi" style="width: 75px; background-color:rgb(213, 234, 93); border-radius:5px; display:flex;justify-content:right;">-----------</p>
+</div>
               <form action="#" onsubmit="yourJsFunction();return false">
                 <label class="form form-control">Select Resistance R3:<br></label>
                 <select class="form form-control" id="r_3">
@@ -594,13 +598,32 @@ function touchHandler(event) {
       z2 = data_r2 + "-j" + x2;
       z3 = data_r3;
       z4 = "-j" + x2;
-      var L1=val_l,C2=data_c2,R2=data_r2,R1=data_r1;
+      var L1=val_l,C2=data_c2,R2=(data_r2),R1=parseInt(data_r1),f=parseInt(data6),R3=parseInt(data_r3);
+    //  var i=(((L1/C2))-R2*R3)**2+((R3/(2*Math.PI*f*C2))-(R1/(2*Math.PI*f*C2))**2);
+     // i=Math.sqrt(i);
+      //i=i*data5;
+      //i/=2000;
+         
+      if(val_l<data_L)
+      {i=(data_L/(val_l*12))
+        i=i.toFixed(2);
+        
+        i*=-1;}
+        else{
+          i=((val_l*25)/(data_L*16))
+        i=i.toFixed(3);
+        
+        }
 
-      console.log(R1,L1,C2,R2,data5,data6);
+        if(val_l>l_min && val_l<l_max)
+        i=0;
+document.getElementById('digi').innerHTML=`${i} mV`;
+      console.log(R1,L1,C2,R2,R3,data5,f);
       // const arr=[data1,data2,data3,data4,data5,data6];
-      const arr = [R1,L1,C2,R2,data5,data6];
+      const arr = [R1,val_l,C2,R2,data5,data6];
       console.log(val_l, l_min, l_max);
       if (val_l>l_min && val_l<l_max) {
+        
         swal("Bridge is Balanced");
         for (var i = 1; i <= 6; i++) {
           if(i==2||i==3)
@@ -612,7 +635,7 @@ function touchHandler(event) {
           // Create a new table data element
           var cell = document.createElement("td");
           if(i==2)
-          cell.innerHTML = (data*1000).toFixed(1);
+          cell.innerHTML = (data*1000).toFixed(2);
           else
           {
             cell.innerHTML = (data*1000000).toFixed(1);
@@ -640,9 +663,9 @@ function touchHandler(event) {
           document.getElementById("myTable").appendChild(row);
           }
         }
-        data_L =(data_L+0.002)%0.004;
-        data_L=Math.max(data_L,0.001);
-        console.log(data_L);
+        //data_L =(data_L+0.002)%0.004;
+        //data_L=Math.max(data_L,0.001);
+        //console.log(data_L);
       }
 
 
@@ -651,7 +674,7 @@ function touchHandler(event) {
         audio.play();
         swal("Unbalanced Bridge");
         if (val_l < (2 * data_L) && val_l > (1 / 2) * data_L)
-          audio.volume = 0.1;
+          {audio.volume = 0.1;}
         else if (val_l < (5 * data_L) && val_l > (1 / 5) * data_L)
           audio.volume = .5;
         else if (val_l < (25 * data_L) && val_l > (1 / 25) * data_L)
