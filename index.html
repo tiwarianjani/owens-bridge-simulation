@@ -1107,20 +1107,22 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
 
               $("<div id='abcd' style = 'position: absolute;top:" + v_top + "px ; left:" + v_left + "px ;'><b>V,f</b></div>")
                 .appendTo("#diagram");
-              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + L_left + "px ;'><b>L1</b></div>")
+                $("<div style= 'position: absolute;top:" + (v_top-25 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
+
+              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + (L_left-30) + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
                 .appendTo("#diagram");
-              $("<div id='bcd' style = 'position: absolute;top:" + c_top2 + "px ; left:" + c_left2 + "px ;'><b>C2</b></div>")
+              $("<div id='bcd' style = 'position: absolute;top:" + c_top2 + "px ; left:" + c_left2 + "px ;'><b>C<sub>2</sub></b></div>")
                 .appendTo("#diagram");
-              $("<div id='abd' style = 'position: absolute;top:" + c_top4 + "px ; left:" + c_left4 + "px ;'><b>C4</b></div>")
+              $("<div id='abd' style = 'position: absolute;top:" + c_top4 + "px ; left:" + c_left4 + "px ;'><b>C<sub>4</sub></b></div>")
                 .appendTo("#diagram");
               console.log(r_pos);
 
               for (var i = 1; i < 3; i++) {
-                $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[i][0] + "px ; left:" + r_pos[i][1] + "px ;'><b>R" + (i + 1) + "</b></div>")
+                $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[i][0] + "px ; left:" + r_pos[i][1] + "px ;'><b>R<sub>" + (i + 1) + "</sub></b></div>")
                   .appendTo("#diagram");
               }
 
-              $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[0][0] + "px ; left:" + r_pos[0][1] + "px ;'><b>R1</b></div>")
+              $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[0][0] + "px ; left:" + r_pos[0][1] + "px ;'><b>R<sub>1</sub></b></div>")
                 .appendTo("#diagram");
               mydiv.style.display = "block";
 
@@ -1164,18 +1166,20 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
 
               $("<div id='abcd' style = 'position: absolute;top:" + v_top + "px ; left:" + v_left + "px ;'><b>V,f</b></div>")
                 .appendTo("#diagram");
-              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + L_left + "px ;'><b>L1</b></div>")
+                $("<div style= 'position: absolute;top:" + (v_top-25 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
+
+              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + L_left + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
                 .appendTo("#diagram");
-              $("<div id='bcd' style = 'position: absolute;top:" + c_top2 + "px ; left:" + c_left2 + "px ;'><b>C2</b></div>")
+              $("<div id='bcd' style = 'position: absolute;top:" + c_top2 + "px ; left:" + c_left2 + "px ;'><b>C<sub>2</sub></b></div>")
                 .appendTo("#diagram");
-              $("<div id='abd' style = 'position: absolute;top:" + c_top4 + "px ; left:" + c_left4 + "px ;'><b>C4</b></div>")
+              $("<div id='abd' style = 'position: absolute;top:" + c_top4 + "px ; left:" + c_left4 + "px ;'><b>C<sub>4</sub></b></div>")
                 .appendTo("#diagram");
               console.log(r_pos);
               for (var i = 1; i < 3; i++) {
-                $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[i][0] + "px ; left:" + r_pos[i][1] + "px ;'><b>R" + (i + 1) + "</b></div>").appendTo("#diagram");
+                $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[i][0] + "px ; left:" + r_pos[i][1] + "px ;'><b>R<sub>" + (i + 1) + "</sub></b></div>").appendTo("#diagram");
               }
 
-              $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[0][0] + "px ; left:" + r_pos[0][1] + "px ;'><b>R1</b></div>").appendTo("#diagram");
+              $("<div id='r1_tag' style = 'position: absolute;top:" + r_pos[0][0] + "px ; left:" + r_pos[0][1] + "px ;'><b>R<sub>1</sub></b></div>").appendTo("#diagram");
               mydiv.style.display = "block";
 
               var div1 = document.getElementById("diagram");
