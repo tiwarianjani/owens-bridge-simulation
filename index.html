@@ -316,7 +316,7 @@
             <div id="light" class="white_content">
              <div style="text-align: center;">
               <h5>Owen's Bridge Experiment :<br></h5>
-              <img src="owens_bridge.png" width="400px" height="320px">
+              <img src="circuit.png" width="400px" height="320px">
              </div>
              <ul>&bull;Pick up resistances, capacitor, inductor, ac source and speaker from the toolbox.</ul>
              <ul>&bull;Make connections as shown in the figure to form a Owen's bridge (red dot act as source and black dot act as destination).</ul>
@@ -449,9 +449,9 @@ top: 40px;right: 63px;">
 
                 <br>
                 
-                <label class="form form-control">Enter Voltage:</label>
+                <label class="form form-control">Enter Voltage(in Volt):</label>
                 <input class="form form-control" type="number" id="data5"><br>
-                <label class="form form-control">Enter Frequency:</label>
+                <label class="form form-control">Enter Frequency(in Hz):</label>
                 <input class="form form-control" type="number" id="data6"><br>
                 <label>Enter R<sub>2</sub>(in &#8486):</label>
                 <input class="inputRange form form-control" id="rangeInput" type="range" min="1" max="400"
@@ -1168,7 +1168,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
                 .appendTo("#diagram");
                 $("<div style= 'position: absolute;top:" + (v_top-25 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
 
-              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + L_left + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
+              $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + (L_left-25) + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
                 .appendTo("#diagram");
               $("<div id='bcd' style = 'position: absolute;top:" + c_top2 + "px ; left:" + c_left2 + "px ;'><b>C<sub>2</sub></b></div>")
                 .appendTo("#diagram");
