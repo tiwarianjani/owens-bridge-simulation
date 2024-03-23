@@ -224,24 +224,24 @@
           width: 323px;
           text-align: center;background-color: #cb3535;color: white;border-radius: 6px;
       ">Components</h3>
-          <div id="toolbox" class="justify-content-center" style="    position: absolute;
+          <div id="toolbox" class="justify-content-center" style="position: absolute;
           top: 20px;
           width: 323px;
-          height: 204px;
+          height: 234px;
       ">
-            <div class="control r"><img src="resistor.png" width="85px" height="40px"></div>
-            <div class="control v"><img src="voltage.png" width="85px" height="40px"></div>
-            <div class="control t"><img src="galv.png" width="85px" height="40px"></div>
-            <div class="control c"><img src="cap.png" width="85px" height="40px"></div>
-            <div class="control l"> <img src="ind.png" width="85px" height="40px"></div>
+            <div class="control r"><img src="resistor.png" width="85px" height="50px"></div>
+            <div class="control v"><img src="voltage.png" width="85px" height="50px"></div>
+            <div class="control t"><img src="galv.png" width="85px" height="50px"></div>
+            <div class="control c"><img src="cap.png" width="85px" height="50px"></div>
+            <div class="control l"> <img src="ind.png" width="85px" height="50px"></div>
             <h3 style="    position: absolute;
             border: 2px solid black;
             width: 323px;
-            text-align: center;background-color: #cb3535;color: white;border-radius: 6px;top: 216px;
+            text-align: center;background-color: #cb3535;color: white;border-radius: 6px;top: 245px;
         ">Formulae</h3>
             <div id="formulae" style="    position: absolute;
-        top: 258px;
-        padding: 12px;border: 2px solid black;height: 348%;    font-size: 21px; text-align: justify;">
+        top: 288px;
+        padding: 10px;border: 2px solid black;height: 290%;    font-size: 21px; text-align: justify;">
               <h5 style="color: #00741b"> If Bridge is Balanced:</h5>
               There will be no potencial difference across the terminal of the sound-sensor. <br>
               <p> Current through the sound-sensor: 0 </p>
@@ -340,7 +340,7 @@
               <b>Observations</b></a> -->
             </p>
             <!-- <br> -->
-            <div id="light2" class="white_content"><b>Observation Table</b><br>
+            <div id="light2" class="white_content" style=" overflow: scroll;"><b>Observation Table</b><br>
               <!-- <table id="myTable">
                 <tr>
                   <th>`R_1` in(&#8486)</th>
@@ -426,16 +426,16 @@ top: 40px;right: 63px;">
   <p>, C<sub>4</sub>=1 &#956F</p>
 </div>
               <form action="#" onsubmit="yourJsFunction();return false">
-                <label class="form form-control">Select Resistance R<sub>3</sub>:<br></label>
+                <label >Select R<sub>3</sub>:<br>
                 <select class="form form-control" id="r_3">
 
                   <!-- <option>Select capacitence</option> -->
                   <option value="100" class="form form-control"> 100&#8486 </option>
                   <option value="200" class="form form-control"> 200&#8486 </option>
                 </select>
-
+</label>
                 <br>
-                <label class="form form-control"> Select capacitance C<sub>2</sub>:<br></label>
+                <label >Select C<sub>2</sub>:<br></label>
                 <select class="form form-control" id="c_2">
 
                   <!-- <option>Select capacitence</option> -->
@@ -449,15 +449,22 @@ top: 40px;right: 63px;">
 
                 <br>
                 
-                <label class="form form-control">Enter Voltage(in Volt):</label>
-                <input class="form form-control" type="number" id="data5"><br>
-                <label class="form form-control">Enter Frequency(in Hz):</label>
-                <input class="form form-control" type="number" id="data6"><br>
-                <label>Enter R<sub>2</sub>(in &#8486):</label>
+                <label >Voltage(in Volt):</label>
+                <select class="form form-control"  id="data5">
+                  <option class="form form-control" value="10"> 10V</option>
+                  <option class="form form-control" value="15"> 15V</option>
+                </select>
+                <!-- <input class="form form-control" type="number" id="data5"><br> -->
+                <label ></label>Frequency(in Hz):</label>
+                <select class="form form-control"  id="data6">
+                  <option class="form form-control" value="50"> 50Hz</option>
+                </select>
+                <!-- <input class="form form-control" type="number" id="data6"><br> -->
+                <label>Input R<sub>2</sub>(in &#8486):</label>
                 <input class="inputRange form form-control" id="rangeInput" type="range" min="1" max="400"
-                  value="1" />
+                  value="1" step="0.01"/>
                 <input class="form form-control" class="inputNumber" id="numberInput" type="number" min="1" max="400" placeholder="1 to 400"
-                  value="1" /><br>
+                  value="1" step="0.01" /><br>
                 <input class="btn btn-success" id="btn1" style="width: 100%;" type="submit" disabled />
 
               </form>
@@ -471,14 +478,14 @@ top: 40px;right: 63px;">
             <h3 style="    position: relative;
           border: 2px solid black;
           width: 458px;
-          text-align: center;background-color: #cb3535;color: white;border-radius: 6px;right: 40px;        top: 700px;bottom: 0px;
+          text-align: center;background-color: #cb3535;color: white;border-radius: 6px;right: 40px;        top: 570px;bottom: 0px;
       ">Observation Table</h3>
             <table id="myTable" style="    position: relative;
-                  top: 695px;
+                  top: 565px;
             border: 2px solid black!important;
             right: 39px;
         width: 102%;
-            height: 50px;text-align: center;" class="">
+            height: 50px;text-align: center;overflow: scroll;" class="">
             <tr>
               <th>`R_1` in(&#8486) </th>
               <th>`L_1` in(mH)</th>
@@ -546,21 +553,17 @@ function touchHandler(event) {
        { 
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
-         var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-         {i=(data_L/(val_l*12))
+         var val_l = data_r3 * data_c2 * data_r2;    
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
 
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-            }
-  
-          i=i*data5;
-          i/=25;
+         i=i*data5*5.0;
+          i/=15;
           i=i.toFixed(3);
           var l_min, l_max;
-          l_min = 0.95 * data_L;
-          l_max = 1.05 * data_L;
+          l_min = 0.98 * data_L;
+        l_max = 1.02 * data_L;
     if (i<=l_max&& i>=l_min)
     i=0;
          document.getElementById('digi').innerHTML=`${i} mV`;
@@ -579,20 +582,16 @@ function touchHandler(event) {
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
          var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-        {i=(data_L/(val_l*12))
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
 
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-            }
-  
-          i=i*data5;
-          i/=25;
+         i=i*data5*5.0;
+          i/=15;
           i=i.toFixed(3);
           var l_min, l_max;
-          l_min = 0.95 * data_L;
-          l_max = 1.05 * data_L;
+          l_min = 0.98 * data_L;
+          l_max = 1.02 * data_L;
     if (i<=l_max&& i>=l_min)
     i=0;
          document.getElementById('digi').innerHTML=`${i} mV`;
@@ -611,20 +610,16 @@ function touchHandler(event) {
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
          var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-        {i=(data_L/(val_l*12))
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
 
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-
-          }
-          i=i*data5;
-          i/=25;
+         i=i*data5*5.0;
+          i/=15;
           i=i.toFixed(3);
           var l_min, l_max;
-          l_min = 0.95 * data_L;
-          l_max = 1.05 * data_L;
+          l_min = 0.98 * data_L;
+        l_max = 1.02 * data_L;
     if (i<=l_max&& i>=l_min)
     i=0;
                  
@@ -645,19 +640,16 @@ function touchHandler(event) {
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
          var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-        {i=(data_L/(val_l*12))          
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-          
-          }
-          i=i*data5;
-          i/=25;
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
+
+         i=i*data5*5.0;
+          i/=15;
           i=i.toFixed(3);
           var l_min, l_max;
-          l_min = 0.95 * data_L;
-          l_max = 1.05 * data_L;
+          l_min = 0.98 * data_L;
+        l_max = 1.02 * data_L;
     if (i<=l_max&& i>=l_min)
     i=0;
                  
@@ -679,22 +671,16 @@ function touchHandler(event) {
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
          var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-        {i=(data_L/(val_l*12))
-         
-          
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-        
-          
-          }
-          i=i*data5;
-          i/=25;
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
+
+         i=i*data5*5.0;
+          i/=15;
           i=i.toFixed(3);
           var l_min, l_max;
-          l_min = 0.95 * data_L;
-          l_max = 1.05 * data_L;
+          l_min = 0.98 * data_L;
+        l_max = 1.02 * data_L;
     if (i<=l_max&& i>=l_min)
     i=0;
                  
@@ -717,21 +703,16 @@ function touchHandler(event) {
          data_c2 = parseFloat(data_c2);// used for converting int to flaot
         data_r2 = parseFloat(data_r2);
          var val_l = data_r3 * data_c2 * data_r2;
-         if(val_l<data_L)
-        {i=(data_L/(val_l*12))
-          
-          
-          i*=-1;}
-          else{
-            i=((val_l*25)/(data_L*16))
-          
-          }
-  i=i*data5;
-  i/=25;
+         var mx=Math.max(val_l,data_L);
+         var mn=Math.min(val_l,data_L);
+         i=(mx-mn)/mx;
+
+          i=i*data5*5.0;
+          i/=15;
   i=i.toFixed(3);
   var l_min, l_max;
-        l_min = 0.95 * data_L;
-        l_max = 1.05 * data_L;
+        l_min = 0.98 * data_L;
+        l_max = 1.02 * data_L;
   if (i<=l_max&& i>=l_min)
   i=0;
          
@@ -796,8 +777,8 @@ function touchHandler(event) {
       console.log(data_r3,data_c2,data_r2,data_L);
   
       var l_min, l_max;
-      l_min = 0.95 * data_L;
-      l_max = 1.05 * data_L;
+      l_min = 0.98 * data_L;
+      l_max = 1.02 * data_L;
 
 
       /*cur=curr;
@@ -965,7 +946,7 @@ function touchHandler(event) {
           if (id[0] == 'v') {
 
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}], maxConnections: 2,
+              endpoint: ["Dot",{radius:10}], maxConnections: 2,
               anchor: ["Left"],
               isSource: true, paintStyle: { fill: "red" },
             
@@ -973,7 +954,7 @@ function touchHandler(event) {
             });
 
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}], maxConnections: 2,
+              endpoint: ["Dot",{radius:10}], maxConnections: 2,
               anchor: ["Right"],
               isTarget: true,
               connectionType: "red-connection"
@@ -982,14 +963,14 @@ function touchHandler(event) {
           }
           else if (id[0] == 't') {
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}],
+              endpoint: ["Dot",{radius:10}],
               anchor: ["Left"],
               isTarget: true,
               connectionType: "red-connection"
             });
 
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}],
+              endpoint: ["Dot",{radius:10}],
               anchor: ["Right"], paintStyle: { fill: "red" },
               isSource: true,
               connectionType: "red-connection"
@@ -999,14 +980,14 @@ function touchHandler(event) {
           
           else {
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}], maxConnections: 2,
+              endpoint: ["Dot",{radius:10}], maxConnections: 2,
               anchor: ["Right"], paintStyle: { fill: "red" },
               isSource: true,
               connectionType: "red-connection"
             });
 
             instance.addEndpoint(id, {
-              endpoint: ["Dot",{radius:5}], maxConnections: 2,
+              endpoint: ["Dot",{radius:10}], maxConnections: 2,
               anchor: ["Left"],
               isTarget: true,
               connectionType: "red-connection"
@@ -1019,7 +1000,7 @@ function touchHandler(event) {
     document.getElementsByTagName("button")[0].onclick = contagem;
 
     function contagem() {
-var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-40 ;
+var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-60 ;
 var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
       var allConnections = instance.getConnections({
         //scope: "someScope"
@@ -1107,7 +1088,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
 
               $("<div id='abcd' style = 'position: absolute;top:" + v_top + "px ; left:" + v_left + "px ;'><b>V,f</b></div>")
                 .appendTo("#diagram");
-                $("<div style= 'position: absolute;top:" + (v_top-25 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
+                $("<div style= 'position: absolute;top:" + (v_top-40 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
 
               $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + (L_left-30) + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
                 .appendTo("#diagram");
@@ -1166,7 +1147,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
 
               $("<div id='abcd' style = 'position: absolute;top:" + v_top + "px ; left:" + v_left + "px ;'><b>V,f</b></div>")
                 .appendTo("#diagram");
-                $("<div style= 'position: absolute;top:" + (v_top-25 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
+                $("<div style= 'position: absolute;top:" + (v_top-40 )+ "px ; left:" + (v_left+60) + "px ;'><img  src='gnd.png'></div>").appendTo('#diagram');
 
               $("<div id='abc' style = 'position: absolute;top:" + L_top + "px ; left:" + (L_left-25) + "px ;'><b>L<sub>1</sub>(Unknown)</b></div>")
                 .appendTo("#diagram");
@@ -1214,7 +1195,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
       });
     }
  function r_r(count, map, so, arr)//r3
-    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-40 ;
+    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-60 ;
     var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
     
       r_top = document.querySelector('#' + so + '').getBoundingClientRect().top -p_top;
@@ -1226,7 +1207,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
         return true;
     }
     function c_c1(count, map, so, arr)//c4
-    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-40 ;
+    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-60 ;
     var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
     
       c_top4 = document.querySelector('#' + so + '').getBoundingClientRect().top -p_top;
@@ -1237,7 +1218,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
         return true;
     }
     function r_L(count, map, so, arr)//r1 L1
-    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-40 ;
+    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-60 ;
     var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
     
       if (so[0] == 'r') {
@@ -1275,7 +1256,7 @@ var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
       }
     }
     function r_c(count, map, so, arr)//r2 c2
-    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-40 ;
+    {var p_top=document.querySelector('#diagram' ).getBoundingClientRect().top-60 ;
     var p_left=document.querySelector('#diagram').getBoundingClientRect().left-40;
     
       if (so[0] == 'r') {
